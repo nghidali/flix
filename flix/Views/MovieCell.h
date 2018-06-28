@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//hi
+//hi there
 @interface MovieCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
