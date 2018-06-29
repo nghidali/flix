@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *releaseDateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *overviewLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *overviewLabel;
+@property (weak, nonatomic) IBOutlet UITextView *overviewLabel;
 
 
 @end
@@ -38,6 +39,8 @@
         NSURL *posterURL = [NSURL URLWithString:[baseURLString stringByAppendingString:posterPath]];
         [self.backdropImageView setImageWithURL:backdropURL];
         [self.posterImageView setImageWithURL:posterURL];
+        [self.overviewLabel sizeToFit];
+        [self.titleLabel sizeToFit];
     }
 }
 

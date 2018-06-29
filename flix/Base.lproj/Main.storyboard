@@ -22,9 +22,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="mez-7c-5hT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="7X0-sm-zY9" customClass="MovieCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                        <rect key="frame" x="0.0" y="84" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7X0-sm-zY9" id="OwL-Gc-LYf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
@@ -71,6 +76,7 @@
                     <navigationItem key="navigationItem" id="s1B-CC-Xda"/>
                     <connections>
                         <outlet property="activityIndicator" destination="H4V-QP-wbA" id="F1M-Jt-7aQ"/>
+                        <outlet property="searchBar" destination="mez-7c-5hT" id="sEe-4H-VOl"/>
                         <outlet property="tableView" destination="dmR-5d-OZa" id="gt4-sr-Ocu"/>
                     </connections>
                 </viewController>
@@ -146,18 +152,11 @@
                                 <rect key="frame" x="16" y="256" width="100" height="154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCW-wi-vJy">
-                                <rect key="frame" x="124" y="346" width="235" height="28"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCW-wi-vJy">
+                                <rect key="frame" x="124" y="338" width="235" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-Wf-Hhu">
-                                <rect key="frame" x="16" y="430" width="343" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-79-Kau">
@@ -167,13 +166,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" editable="NO" text="Overview" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8YE-NW-hfO">
+                                <rect key="frame" x="16" y="431" width="343" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="92e-g1-Pty"/>
                     </view>
                     <connections>
                         <outlet property="backdropImageView" destination="04n-Iq-bh4" id="4cF-kV-O5f"/>
-                        <outlet property="overviewLabel" destination="OeJ-Wf-Hhu" id="W41-Eo-exo"/>
+                        <outlet property="overviewLabel" destination="8YE-NW-hfO" id="UiD-Td-qkE"/>
                         <outlet property="posterImageView" destination="kYH-QC-Mme" id="57f-3J-3F4"/>
                         <outlet property="releaseDateLabel" destination="qc1-79-Kau" id="a5c-0v-uMK"/>
                         <outlet property="titleLabel" destination="VCW-wi-vJy" id="pww-h5-uxY"/>
@@ -181,13 +188,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1s-gm-2fI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="1831"/>
+            <point key="canvasLocation" x="141.59999999999999" y="1830.1349325337333"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="lo7-AT-SEW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SjR-11-Tyy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" id="rQS-lb-DRg"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="rQS-lb-DRg">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L1F-Kh-4dN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -202,11 +211,13 @@
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
         </scene>
-        <!--Item-->
+        <!--Collections-->
         <scene sceneID="aE9-yV-zEp">
             <objects>
                 <navigationController id="RJ5-IW-H8I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0Re-Og-IxD"/>
+                    <tabBarItem key="tabBarItem" title="Collections" image="superhero_tabbar_item" id="0Re-Og-IxD">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lPN-Q9-CFp">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -238,6 +249,10 @@
             <point key="canvasLocation" x="142" y="-621"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
+        <image name="superhero_tabbar_item" width="21" height="23"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iMh-u9-nGU"/>
     </inferredMetricsTieBreakers>
