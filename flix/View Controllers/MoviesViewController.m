@@ -10,6 +10,7 @@
 #import "MovieCell.h"
 #import "MovieCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "DetailViewController.h"
 
 @interface MoviesViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (strong, nonatomic) NSMutableArray<NSDictionary*> *movies;
@@ -30,8 +31,12 @@
     
     //resize collection view
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout*) self.collectionView.collectionViewLayout;
+    
+    layout.minimumInteritemSpacing = 5;
+    layout.minimumLineSpacing = 5;
+    
     CGFloat postersPerLine = 2;
-    CGFloat itemWidth = self.collectionView.frame.size.width / postersPerLine;
+    CGFloat itemWidth = (self.collectionView.frame.size.width - layout.minimumInteritemSpacing) *(postersPerLine - 1) / postersPerLine;
     CGFloat itemHeight = 1.5 * itemWidth;
     layout.itemSize = CGSizeMake(itemWidth,itemHeight);
 }
@@ -93,6 +98,14 @@
     return self.movies.count;
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    if (indexPath != nil) {
+        NSDictionary *movie = self.movies[indexPath.row];
+        DetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.movie = movie;
+    }
+}
 
 @end
