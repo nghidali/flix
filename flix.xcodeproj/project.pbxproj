@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B208F7ADBF24CB098BE4351 /* libPods-flixTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D153C19BE2EEC06D1D994BF /* libPods-flixTests.a */; };
 		3C9AED9C145D24B4066137C7 /* libPods-flix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2CDE789CDB9B389DB7D0FE9 /* libPods-flix.a */; };
+		67C444E020E6E300005ADAC7 /* RelatedMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C444DF20E6E300005ADAC7 /* RelatedMoviesViewController.m */; };
+		67C444E320E6E393005ADAC7 /* RelatedMoviesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C444E220E6E393005ADAC7 /* RelatedMoviesCollectionViewCell.m */; };
 		67EC01E920E59599006F9C41 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EC01E820E59599006F9C41 /* MoviesViewController.m */; };
 		67EC01EC20E59D2C006F9C41 /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EC01EB20E59D2C006F9C41 /* MovieCollectionViewCell.m */; };
 		6A5124B420A3FA8D00176C18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5124B320A3FA8D00176C18 /* AppDelegate.m */; };
@@ -36,6 +38,10 @@
 		25391054667481679A9C02A4 /* Pods-flixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flixTests/Pods-flixTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D8A0918BBDAD051124A891A /* Pods-flixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flixTests/Pods-flixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D153C19BE2EEC06D1D994BF /* libPods-flixTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flixTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C444DE20E6E300005ADAC7 /* RelatedMoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RelatedMoviesViewController.h; sourceTree = "<group>"; };
+		67C444DF20E6E300005ADAC7 /* RelatedMoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelatedMoviesViewController.m; sourceTree = "<group>"; };
+		67C444E120E6E393005ADAC7 /* RelatedMoviesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RelatedMoviesCollectionViewCell.h; sourceTree = "<group>"; };
+		67C444E220E6E393005ADAC7 /* RelatedMoviesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelatedMoviesCollectionViewCell.m; sourceTree = "<group>"; };
 		67EC01E720E59599006F9C41 /* MoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
 		67EC01E820E59599006F9C41 /* MoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
 		67EC01EA20E59D2C006F9C41 /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
@@ -139,10 +145,12 @@
 		6A63651420BAF9A600B2E6EE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				67C444E120E6E393005ADAC7 /* RelatedMoviesCollectionViewCell.h */,
 				6A63650C20B71BDA00B2E6EE /* MovieCell.h */,
 				6A63650D20B71BDA00B2E6EE /* MovieCell.m */,
 				67EC01EA20E59D2C006F9C41 /* MovieCollectionViewCell.h */,
 				67EC01EB20E59D2C006F9C41 /* MovieCollectionViewCell.m */,
+				67C444E220E6E393005ADAC7 /* RelatedMoviesCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +158,8 @@
 		6A63651520BAF9AD00B2E6EE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				67C444DF20E6E300005ADAC7 /* RelatedMoviesViewController.m */,
+				67C444DE20E6E300005ADAC7 /* RelatedMoviesViewController.h */,
 				6A5124B520A3FA8D00176C18 /* NowPlayingViewController.h */,
 				6A5124B620A3FA8E00176C18 /* NowPlayingViewController.m */,
 				6A63651620BAF9DF00B2E6EE /* DetailViewController.h */,
@@ -314,8 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A63651820BAF9DF00B2E6EE /* DetailViewController.m in Sources */,
+				67C444E320E6E393005ADAC7 /* RelatedMoviesCollectionViewCell.m in Sources */,
 				6A5124B720A3FA8E00176C18 /* NowPlayingViewController.m in Sources */,
 				6A5124C220A3FA8F00176C18 /* main.m in Sources */,
+				67C444E020E6E300005ADAC7 /* RelatedMoviesViewController.m in Sources */,
 				67EC01E920E59599006F9C41 /* MoviesViewController.m in Sources */,
 				6A63650E20B71BDA00B2E6EE /* MovieCell.m in Sources */,
 				6A5124B420A3FA8D00176C18 /* AppDelegate.m in Sources */,
@@ -480,13 +492,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 63XSXDMV4X;
+				DEVELOPMENT_TEAM = HH2ZJ74M2A;
 				INFOPLIST_FILE = flix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.emersonmalca.flix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nghidali.flixster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -501,13 +513,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = 63XSXDMV4X;
+				DEVELOPMENT_TEAM = HH2ZJ74M2A;
 				INFOPLIST_FILE = flix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.emersonmalca.flix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nghidali.flixster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

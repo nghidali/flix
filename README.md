@@ -2,7 +2,7 @@
 
 **Flix** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **8** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -21,30 +21,30 @@ The following **optional** features are implemented:
 - [X] All images fade in as they are loading.
 - [X] User can view the large movie poster by tapping on a cell.
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
-- [ ] Customize the selection effect of the cell.
+- [X] Customize the selection effect of the cell.
 - [X] Customize the navigation bar.
 - [X] Customize the UI.
 
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
+In the middle of implementing the related movies collection view. I will continue to work on this later.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
-
+1. Collection View - Any way to do this really quickly?
+2. Tips for next time - bugs we learned from.
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/3IfwM7A.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-When I was commiting my changes to my github repository I was not doing git add . beforehand. This meant that my remote github repository did not have all the changes I had made. When I had a strange error me and one of the instructors decided it would be best to go back to my previous commit and did a hard reset to that commit. This unfortunately deleted all my code since the remote github was not being updated since I wasn't adding my files before I committed and pushed them. This was a fantastic learning opportunity on the importance of being careful when using GIT so I don't delete my code. :)
+When I was commiting my changes to my github repository I was not doing git add . beforehand. This meant that my remote github repository did not have all the changes I had made. When I had a strange error me and one of the instructors decided it would be best to go back to my previous commit and did a hard reset to that commit. This unfortunately deleted all my code since the remote github was not being updated since I wasn't adding my files before I committed and pushed them. Since the instructor had seen how far I had gotten in the code, he gave me his code for up until that point which was up until the Detail View. The additional options are my original code. This was a fantastic learning opportunity on the importance of being careful when using GIT so I don't delete my code. :)
 
 ## Credits
 
@@ -54,7 +54,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Natalie Ghidali]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
