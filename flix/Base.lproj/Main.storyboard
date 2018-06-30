@@ -227,12 +227,13 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JnI-ku-X4i">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="163"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="posterView" destination="JnI-ku-X4i" id="V6C-PF-Ihc"/>
+                                            <segue destination="8ey-uT-2J7" kind="show" id="ono-Cz-Dxh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -314,6 +315,6 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oEs-5h-2lZ"/>
+        <segue reference="ono-Cz-Dxh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -58,11 +58,12 @@
 */
 
 - (void)fetchMovies {
-    NSNumber *movieId = [NSNumber numberWithLong:self.movie[@"id"]];
-    //movieId = [[NSNumber numberWithLong:movieId] stringValue];
+    NSDictionary* movieDict = self.movie[@"id"];
+    NSString * movieId = [NSString stringWithFormat:@"%@", movieDict];
     NSString* URLString = @"https://api.themoviedb.org/3/movie/";
-    URLString = [URLString stringByAppendingString:[movieId stringValue]]; //problem
-    URLString = [URLString stringByAppendingString:@"/similar/?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
+    URLString = [URLString stringByAppendingString:movieId]; //problem
+    URLString = [URLString stringByAppendingString:@"/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1"];
+    NSLog(URLString);
     NSURL *url = [NSURL URLWithString:URLString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -100,4 +101,13 @@
     return self.movies.count;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    if (indexPath != nil) {
+        NSDictionary *movie = self.movies[indexPath.row];
+        DetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.movie = movie;
+    }
+}
 @end
